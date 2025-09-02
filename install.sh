@@ -72,6 +72,8 @@ cat <<EOL > ./config/config.json
     "CLIENT_ID":"your-client-id",
     "GUILD_ID":"your-guild-id",
 
+    "PORT":8080,
+
     "DB_HOST":"localhost",
     "DB_PORT":3306,
     "DB_USER":"${DB_USER}",

@@ -45,3 +45,5 @@ for (const file of eventFiles) {
 }
 
 client.login(TOKEN);
+
+module.exports = client;

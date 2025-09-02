@@ -4,8 +4,8 @@
   "description": "Just another JavaScript Bot...",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/bot/bot.js",
-    "dev": "nodemon backend/bot/bot.js",
+    "start": "node frontend/index.js",
+    "dev": "nodemon frontend/index.js",
     "deploy-commands": "node backend/bot/deploy-commands.js"
   },
   "repository": {
@@ -28,6 +28,8 @@
   "homepage": "https://github.com/EnzoZarx/JaJS-Bot#readme",
   "dependencies": {
     "discord.js": "^14.7.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
     "jimp": "^0.22.8",
     "mariadb": "^3.4.4",
     "sequelize": "^6.37.7",

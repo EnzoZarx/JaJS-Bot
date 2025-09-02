@@ -1,0 +1,252 @@
+/* Colors */
+
+.first-color {
+  background: #fe66c4;
+}
+
+.second-color {
+  background: #5170fe;
+}
+
+.third-color {
+  background: #aa6ae0;
+}
+
+.fourth-color {
+  background: #dbedf3;
+}
+
+.fifth-color {
+  background: #4b5ba3;
+}
+
+.sixth-color {
+  background: #af6f96;
+}
+
+.seventh-color {
+  background: #808ab9;
+}
+
+.eighth-color {
+  background: #d492bb;
+}
+
+/* Dashboard Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #4b5ba3 0%, #af6f96 100%);
+  color: #dbedf3;
+  font-weight: bold;
+}
+
+a {
+  color: #dbedf3;
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+textarea:focus {
+  outline: none !important;
+}
+
+input,
+select:focus {
+  outline: none !important;
+}
+
+.dashboard-container {
+  margin-left: 40vh;
+  margin-right: 40vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.button {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 10px 20px !important;
+  background: linear-gradient(90deg, #5170fe 0%, #fe66c4 100%) !important;
+  color: #dbedf3 !important;
+  border-radius: 5px !important;
+  font-weight: bold !important;
+  margin-top: 20px !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+  cursor: pointer !important;
+  font-size: 1.1em;
+  border: none !important;
+}
+
+.button svg {
+  padding-right: 10px;
+  height: 35px;
+}
+
+.button:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* Homepage Styles */
+
+.homepage-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-box {
+  background: linear-gradient(90deg, #808ab9 0%, #d492bb 100%);
+  padding: 80px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Form Styles */
+
+.question {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid #dbedf3;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #fe66c433 0%, #5170fe33 100%);
+}
+
+.question label {
+  margin-bottom: 10px;
+  font-size: large;
+}
+
+.question-form input {
+  padding: 12px 15px;
+  border: 2px solid #dbedf3;
+  background: #e8f3f7;
+  color: #5170fe;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.question-form input::placeholder {
+  color: #5171fe88;
+}
+
+.question-form textarea {
+  padding: 12px 15px;
+  border: 2px solid #dbedf3;
+  resize: none;
+  background: #e8f3f7;
+  color: #5170fe;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+}
+
+.question-form textarea::placeholder {
+  color: #5171fe88;
+}
+
+.question-form select {
+  padding: 12px 15px;
+  border: 2px solid #dbedf3;
+  background: #e8f3f7;
+  color: #5170fe;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.question-form select option {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+}
+
+.options button {
+  padding: 6px 14px;
+  border: 2px solid #dbedf3;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+  text-align: center;
+  background: #e8f3f7;
+  color: #5171fe88;
+  display: flex;
+  align-items: center;
+  min-height: 45px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.options button:hover {
+  background: #f5d6e9 !important;
+  border: 2px solid #f5d6e9 !important;
+  color: #5170fe !important;
+  transform: translateY(-5px);
+}
+
+.options button.selected {
+  background: #f5d6e9 !important;
+  border: 2px solid #f5d6e9 !important;
+  color: #5170fe !important;
+}
+
+.info-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #dbedf39a;
+  position: relative;
+  color: #5170fe;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  cursor: help;
+  margin-left: 7px;
+}
+
+.info-icon .info-text {
+  visibility: hidden;
+  width: 220px;
+  background-color: #5170fe;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.info-icon .info-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 27%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.info-icon:hover .info-text {
+  visibility: visible;
+}
