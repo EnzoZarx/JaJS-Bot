@@ -101,6 +101,6 @@ echo "Node.js Dependencies Install..."
 npm install
 
 # Finish Message
-echo "Install Done ! Think of configuring .env."
+echo "Install Done ! Think of configuring your environment."
 
 exit 0
