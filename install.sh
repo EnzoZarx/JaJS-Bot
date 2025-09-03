@@ -91,9 +91,9 @@ cat <<EOL > ./config/settings.json
     "STAFF_ROLE_ID": "your-staff-role-id",
     "_comment2": "This role will have access to the moderation commands part in 'backend/bot'",
     "MODERATION_ROLE_ID": "your-moderator-role-id",
-    "_comment4": "This role will be added to staff members when they are on holiday",
+    "_comment3": "This role will be added to staff members when they are on holiday",
     "HOLIDAY_ROLE_ID": "your-holiday-role-id",
-    "_comment5": "You will need to fill the rank update channel and 4 rank from lower to harder to get or modify messageCreate.js in the events folder to add or remove rank roles",
+    "_comment4": "You will need to fill the rank update channel and 4 rank from lower to harder to get or modify messageCreate.js in the events folder to add or remove rank roles",
     "INACTIVE_XP_CHANNELS": ["CHANNELS_ID"],
     "RANK_UPDATE_CHANNEL": "your-rank-update-channel-id",
     "RANK_UPDATE_ROLES": ["ROLES_ID"]
