@@ -28,34 +28,38 @@ read -p "Enter your user name for database : " DB_USER
 read -s -p "Enter password for your user : " DB_PASSWORD
 echo ""
 echo "Database and User Creation..."
+
 # Use the root password to execute SQL commands
-sudo mysql -u root -p${ROOT_PASSWORD} <<EOF
-CREATE DATABASE jajs_db;
-CREATE USER '${DB_USER}'@'localhost' IDENTIFIED BY '${DB_PASSWORD}';
+sudo mariadb -u root -p"${ROOT_PASSWORD}" <<EOF
+CREATE DATABASE IF NOT EXISTS jajs_db;
+CREATE USER IF NOT EXISTS '${DB_USER}'@'localhost' IDENTIFIED BY '${DB_PASSWORD}';
 GRANT ALL PRIVILEGES ON jajs_db.* TO '${DB_USER}'@'localhost';
 FLUSH PRIVILEGES;
-DROP TABLE IF EXISTS `logs`;
-DROP TABLE IF EXISTS `xp`;
 
-CREATE TABLE `logs` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `user_id` VARCHAR(32) NOT NULL,
-  `user_name` VARCHAR(255) NOT NULL,
-  `moderator_id` VARCHAR(32),
-  `moderator_username` VARCHAR(255),
-  `action` VARCHAR(255) NOT NULL,
-  `timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+USE jajs_db;
+
+DROP TABLE IF EXISTS \`logs\`;
+DROP TABLE IF EXISTS \`xp\`;
+
+CREATE TABLE \`logs\` (
+  \`id\` INT NOT NULL AUTO_INCREMENT,
+  \`user_id\` VARCHAR(32) NOT NULL,
+  \`user_name\` VARCHAR(255) NOT NULL,
+  \`moderator_id\` VARCHAR(32),
+  \`moderator_username\` VARCHAR(255),
+  \`action\` VARCHAR(255) NOT NULL,
+  \`timestamp\` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (\`id\`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
-CREATE TABLE `xp` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `user_id` VARCHAR(32) NOT NULL UNIQUE,
-  `user_name` VARCHAR(255) NOT NULL,
-  `current_xp` float NOT NULL DEFAULT 10,
-  `next_xp` float NOT NULL DEFAULT 100,
-  `level` int NOT NULL DEFAULT 1,
-  PRIMARY KEY (`id`)
+CREATE TABLE \`xp\` (
+  \`id\` INT NOT NULL AUTO_INCREMENT,
+  \`user_id\` VARCHAR(32) NOT NULL UNIQUE,
+  \`user_name\` VARCHAR(255) NOT NULL,
+  \`current_xp\` FLOAT NOT NULL DEFAULT 10,
+  \`next_xp\` FLOAT NOT NULL DEFAULT 100,
+  \`level\` INT NOT NULL DEFAULT 1,
+  PRIMARY KEY (\`id\`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 EOF
 
