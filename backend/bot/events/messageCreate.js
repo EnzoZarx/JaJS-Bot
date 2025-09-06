@@ -12,13 +12,14 @@ module.exports = {
         } else {
             const user = await XP.findOne({ where: { user_id: message.author.id } });
             if (user) {
-                const updated_xp = user.current_xp + 250;
+                const updated_xp = user.total_xp + 10;
                 if (updated_xp >= user.next_xp) {
                     XP.update({
-                        current_xp: 0,
                         level: user.level + 1,
                         next_xp: 100 * (Math.pow(1.1, user.level + 1) - 1) / (1.1 - 1),
-                        user_name: message.author.username
+                        user_name: message.author.username,
+                        total_messages: user.total_messages + 1,
+                        total_xp: user.total_xp + 10
                     }, {
                         where: { user_id: message.author.id }
                     });
@@ -65,8 +66,9 @@ module.exports = {
                     }
                 } else {
                     XP.update({
-                        current_xp: updated_xp,
-                        user_name: message.author.username
+                        user_name: message.author.username,
+                        total_messages: user.total_messages + 1,
+                        total_xp: user.total_xp + 10
                     }, {
                         where: { user_id: message.author.id }
                     });

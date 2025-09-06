@@ -16,7 +16,7 @@ module.exports = {
             return;
         }
 
-        rankSentence = `${translate('rankSentence')} ${userXP.level}`;
+        rankSentence = `${translate('rankSentence1')} **${userXP.level}** ${translate('rankSentence2')} **${userXP.total_messages}**.`;
         await interaction.reply({ content: rankSentence, flags: [MessageFlags.Ephemeral] });
     }
 };

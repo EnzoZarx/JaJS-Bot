@@ -51,10 +51,6 @@ const XP = sequelize.define('XP', {
         type: Sequelize.STRING(255),
         allowNull: false
     },
-    current_xp: {
-        type: Sequelize.FLOAT,
-        defaultValue: 10
-    },
     next_xp: {
         type: Sequelize.FLOAT,
         defaultValue: 100
@@ -62,6 +58,14 @@ const XP = sequelize.define('XP', {
     level: {
         type: Sequelize.INTEGER,
         defaultValue: 1
+    },
+    total_messages: {
+        type: Sequelize.INTEGER,
+        defaultValue: 1
+    },
+    total_xp: {
+        type: Sequelize.FLOAT,
+        defaultValue: 10
     }
 }, {
     tableName: 'xp',

@@ -22,7 +22,8 @@ module.exports = {
 
         topUsers.forEach((element, index) => {
             embed.addFields(
-                { name: '', value: `> :bust_in_silhouette: **${translate('topEmbedMember')}** <@${element.user_id}> | :trophy: **${translate('topEmbedRank')}** ${index + 1} | :sparkles: **${translate('topEmbedLevel')}** ${element.level}`, inline: false },
+                { name: '', value: `> :bust_in_silhouette: **${translate('topEmbedMember')}** <@${element.user_id}> | :trophy: **${translate('topEmbedRank')}** ${index + 1} | :chart_with_upwards_trend: **${translate('topEmbedLevel')}** ${element.level}
+                > :speech_balloon: **${translate('topEmbedTotalMessages')}** ${element.total_messages} | :sparkles: **${translate('topEmbedTotalXP')}** ${element.total_xp}`, inline: false },
             );
         });
 

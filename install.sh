@@ -56,9 +56,10 @@ CREATE TABLE \`xp\` (
   \`id\` INT NOT NULL AUTO_INCREMENT,
   \`user_id\` VARCHAR(32) NOT NULL UNIQUE,
   \`user_name\` VARCHAR(255) NOT NULL,
-  \`current_xp\` FLOAT NOT NULL DEFAULT 10,
   \`next_xp\` FLOAT NOT NULL DEFAULT 100,
   \`level\` INT NOT NULL DEFAULT 1,
+  \`total_messages\` INT NOT NULL DEFAULT 1,
+  \`total_xp\` FLOAT NOT NULL DEFAULT 10,
   PRIMARY KEY (\`id\`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 EOF

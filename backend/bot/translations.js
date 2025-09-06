@@ -78,7 +78,8 @@ function translate(key) {
             rankUpTitle2: 'Role Update!',
             rankUpDescription2: 'has been given a new role!',
             rankDescription: "Allows you to see your current level.",
-            rankSentence: "Here is your current level:",
+            rankSentence1: "Your current level is:",
+            rankSentence2: "and your current message count is:",
             rankError: "There was an error retrieving your level.",
             // Embed Translations
             embedDescription: "This command allows you to generate a custom embed message. (2min before timeout)",
@@ -92,6 +93,8 @@ function translate(key) {
             topEmbedRank: 'Rank:',
             topEmbedMember: 'Member:',
             topEmbedLevel: 'Level:',
+            topEmbedTotalMessages: 'Total Messages:',
+            topEmbedTotalXP: 'Total XP:',
             // Common Translations
             secondsAbbreviation: 's',
             secondsLiteral: 'seconds',
@@ -189,7 +192,8 @@ function translate(key) {
             rankUpDescription1: 'est passé(e) niveau',
             rankUpDescription2: 'a obtenu un nouveau rôle.',
             rankDescription: "Permet de voir votre niveau actuel.",
-            rankSentence: 'Voici votre niveau actuel :',
+            rankSentence1: 'Voici votre niveau actuel :',
+            rankSentence2: 'et votre nombre de messages actuel :',
             rankError: 'Une erreur est survenue lors de la récupération de votre niveau.',
             // Embed Translations
             embedDescription: "Cette commande permet de générer un message embed personnalisé. (2min avant expiration)",
@@ -203,6 +207,8 @@ function translate(key) {
             topEmbedRank: 'Rang :',
             topEmbedLevel: 'Niveau :',
             topEmbedMember: 'Membre :',
+            topEmbedTotalMessages: 'Messages totaux :',
+            topEmbedTotalXP: 'XP total :',
             // Common Translations
             secondsAbbreviation: 's',
             secondsLiteral: 'secondes',
