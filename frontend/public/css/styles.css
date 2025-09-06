@@ -59,6 +59,10 @@ select:focus {
   outline: none !important;
 }
 
+.logo {
+  height: 300px;
+}
+
 .dashboard-container {
   margin-left: 40vh;
   margin-right: 40vh;
@@ -249,4 +253,137 @@ select:focus {
 
 .info-icon:hover .info-text {
   visibility: visible;
+}
+
+
+/* Tablet Styles (769px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .logo {
+    height: 200px;
+  }
+
+  .dashboard-container {
+    margin: 3vh 5vw;
+  }
+
+  .homepage-box {
+    padding: 3rem;
+    max-width: 90%;
+  }
+
+  .button {
+    padding: 8px 15px !important;
+    font-size: 1rem;
+    margin: 15px 8px !important;
+  }
+
+  .button svg {
+    height: 1.8rem;
+  }
+
+  .question {
+    padding: 15px;
+  }
+
+  .question label {
+    font-size: 1.1rem;
+  }
+
+  .question-form input,
+  .question-form textarea,
+  .question-form select {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .options {
+    gap: 15px;
+  }
+
+  .options button {
+    font-size: 1rem;
+    padding: 5px 12px;
+  }
+
+  .info-icon .info-text {
+    width: 180px;
+    margin-left: -90px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Styles (up to 768px) */
+@media screen and (max-width: 768px) {
+  .logo {
+    height: 200px;
+  }
+
+  .dashboard-container {
+    margin: 2vh 3vw;
+  }
+
+  .homepage-container {
+    padding: 10px;
+  }
+
+  .homepage-box {
+    padding: 2rem;
+    max-width: 95%;
+  }
+
+  .button {
+    padding: 6px 12px !important;
+    font-size: 0.9rem;
+    margin: 10px 5px !important;
+  }
+
+  .button svg {
+    height: 1.5rem;
+    padding-right: 8px;
+  }
+
+  .question {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .question label {
+    font-size: 1rem;
+  }
+
+  .question-form input,
+  .question-form textarea,
+  .question-form select {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .question-form textarea {
+    min-height: 80px;
+  }
+
+  .options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .options button {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+    min-height: 40px;
+  }
+
+  .info-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .info-icon .info-text {
+    width: 160px;
+    margin-left: -80px;
+    font-size: 0.8rem;
+    bottom: 140%;
+  }
 }
