@@ -41,7 +41,7 @@ module.exports = {
                             .setTimestamp();
 
                         switch (user.level + 1) {
-                            case 10:
+                            case 15:
                                 member.roles.add(RANK_UPDATE_ROLES[0]);
                                 await levelUpChannel.send({ embeds: [embedRankUp] });
                                 break;
@@ -50,12 +50,12 @@ module.exports = {
                                 member.roles.add(RANK_UPDATE_ROLES[1]);
                                 await levelUpChannel.send({ embeds: [embedRankUp] });
                                 break;
-                            case 50:
+                            case 40:
                                 member.roles.remove(RANK_UPDATE_ROLES[1]);
                                 member.roles.add(RANK_UPDATE_ROLES[2]);
                                 await levelUpChannel.send({ embeds: [embedRankUp] });
                                 break;
-                            case 100:
+                            case 50:
                                 member.roles.remove(RANK_UPDATE_ROLES[2]);
                                 member.roles.add(RANK_UPDATE_ROLES[3]);
                                 await levelUpChannel.send({ embeds: [embedRankUp] });
