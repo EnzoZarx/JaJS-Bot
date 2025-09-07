@@ -1,12 +1,16 @@
 const { Events, EmbedBuilder } = require('discord.js');
 
-const { INACTIVE_XP_CHANNELS, RANK_UPDATE_CHANNEL, RANK_UPDATE_ROLES, EMBED_COLOR } = require('../../../config/settings.json');
+const { INACTIVE_XP_CHANNELS, RANK_UPDATE_CHANNEL, RANK_UPDATE_ROLES, EMBED_COLOR, NON_MESSAGE_CHANNELS } = require('../../../config/settings.json');
 const { XP } = require('../../../database/models.js');
 const { translate } = require('../translations.js')
 
 module.exports = {
     name: Events.MessageCreate,
     async execute(message) {
+        if (NON_MESSAGE_CHANNELS.includes(message.channel.id)) {
+            message.delete();
+            return;
+        }
         if (message.author.bot || INACTIVE_XP_CHANNELS.includes(message.channel.id) || message.content.length < 2) {
             return;
         } else {

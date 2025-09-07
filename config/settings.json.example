@@ -12,5 +12,6 @@
     "_comment4": "You will need to fill the rank update channel and 4 rank from lower to harder to get or modify messageCreate.js in the events folder to add or remove rank roles",
     "INACTIVE_XP_CHANNELS": ["CHANNELS_ID"],
     "RANK_UPDATE_CHANNEL": "your-rank-update-channel-id",
-    "RANK_UPDATE_ROLES": ["ROLES_ID"]
+    "RANK_UPDATE_ROLES": ["ROLES_ID"],
+    "NON_MESSAGE_CHANNELS": ["CHANNELS_ID"]
 }
