@@ -10,7 +10,7 @@ module.exports = {
 
     async execute(interaction) {
         const topUsers = await XP.findAll({
-            order: [['level', 'DESC']],
+            order: [['total_xp', 'DESC']],
             limit: 10
         });
 
