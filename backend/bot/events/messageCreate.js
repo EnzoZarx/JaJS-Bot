@@ -16,7 +16,7 @@ module.exports = {
                 if (updated_xp >= user.next_xp) {
                     XP.update({
                         level: user.level + 1,
-                        next_xp: 100 * (Math.pow(1.1, user.level + 1) - 1) / (1.1 - 1),
+                        next_xp: 100 * (Math.pow(1.1, user.level + 2) - 1) / (1.1 - 1),
                         user_name: message.author.username,
                         total_messages: user.total_messages + 1,
                         total_xp: user.total_xp + 10
