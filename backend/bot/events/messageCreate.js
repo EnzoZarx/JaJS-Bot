@@ -7,7 +7,7 @@ const { translate } = require('../translations.js')
 module.exports = {
     name: Events.MessageCreate,
     async execute(message) {
-        if (NON_MESSAGE_CHANNELS.includes(message.channel.id)) {
+        if (NON_MESSAGE_CHANNELS.includes(message.channel.id) && !message.author.bot) {
             message.delete();
             return;
         }
