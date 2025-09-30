@@ -13,5 +13,7 @@
     "INACTIVE_XP_CHANNELS": ["CHANNELS_ID"],
     "RANK_UPDATE_CHANNEL": "your-rank-update-channel-id",
     "RANK_UPDATE_ROLES": ["ROLES_ID"],
-    "NON_MESSAGE_CHANNELS": ["CHANNELS_ID"]
+    "NON_MESSAGE_CHANNELS": ["CHANNELS_ID"],
+    "_comment5": "This role will have access to the helper commands part in 'backend/bot'",
+    "HELPER_ROLE_ID": "your-helper-role-id"
 }

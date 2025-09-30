@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, PermissionFlagsBits, MessageFlags, EmbedBuilder } = require('discord.js');
-const { LOG_CHANNEL, EMBED_COLOR, MODERATION_ROLE_ID } = require('../../../../config/settings.json');
+const { LOG_CHANNEL, EMBED_COLOR, MODERATION_ROLE_ID, HELPER_ROLE_ID } = require('../../../../config/settings.json');
 const { translate } = require('../../translations.js');
 const { Log } = require('../../../../database/models.js');
 
@@ -21,7 +21,7 @@ module.exports = {
         .setDefaultMemberPermissions(PermissionFlagsBits.ManageNicknames),
 
     async execute(interaction) {
-        if (!interaction.member.roles.cache.has(MODERATION_ROLE_ID)) {
+        if (!interaction.member.roles.cache.has(MODERATION_ROLE_ID) && !interaction.member.roles.cache.has(HELPER_ROLE_ID)) {
             return await interaction.reply({ content: translate('missingRole'), flags: [MessageFlags.Ephemeral] });
         }
 
