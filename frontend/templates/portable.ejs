@@ -157,7 +157,7 @@
                 responses.push(`- ${label}\n> ${answer}`);
             });
 
-            const finalText = `### **__Voici mes réponses au questionnaire :__**\n\n${responses.join('\n')}`;
+            const finalText = `### **__Voici mes réponses au questionnaire <@&1008706488145035406> :__**\n\n${responses.join('\n')}`;
 
             console.log(finalText)
             navigator.clipboard.writeText(finalText).then(() => {
